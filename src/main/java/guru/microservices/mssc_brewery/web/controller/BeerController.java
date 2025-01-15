@@ -23,7 +23,7 @@ public class BeerController {
     public ResponseEntity<BeerDTO> getBeerById(@PathVariable UUID beerId){
         return new ResponseEntity<>(beerService.getBeerById(beerId), HttpStatus.OK);
     }
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Void> createBeer(@RequestBody BeerDTO beerDTO){
         BeerDTO beerCreated = beerService.createNewBeer(beerDTO);
 
