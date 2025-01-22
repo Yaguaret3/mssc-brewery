@@ -22,7 +22,7 @@ public class CustomerController {
     public ResponseEntity<CustomerDTO> getCustomerById(@PathVariable UUID customerId){
         return new ResponseEntity<>(customerService.getCustomerById(customerId), HttpStatus.OK);
     }
-    @PostMapping
+    @PostMapping("/")
     public ResponseEntity<Void> createNewCustomer(@RequestBody CustomerDTO customerDTO){
         CustomerDTO customerCreated = customerService.createNewCustomer(customerDTO);
         HttpHeaders headers = new HttpHeaders();
