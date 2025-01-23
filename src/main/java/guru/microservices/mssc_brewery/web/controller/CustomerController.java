@@ -43,10 +43,5 @@ public class CustomerController {
         customerService.deleteCustomer(customerId);
     }
 
-    @ExceptionHandler(ConstraintViolationException.class)
-    public ResponseEntity<List<String>> validationExceptionHandler(ConstraintViolationException e){
-        return new ResponseEntity<>(e.getConstraintViolations().stream()
-                .map(c -> c.getPropertyPath()+" : "+c.getMessage())
-                .toList(), HttpStatus.BAD_REQUEST);
-    }
+
 }
