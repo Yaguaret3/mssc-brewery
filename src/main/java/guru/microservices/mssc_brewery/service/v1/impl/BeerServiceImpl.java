@@ -11,7 +11,6 @@ import java.util.UUID;
 @Service
 public class BeerServiceImpl implements BeerService {
 
-
     @Override
     public BeerDTO getBeerById(UUID beerId) {
         return BeerDTO.builder()
