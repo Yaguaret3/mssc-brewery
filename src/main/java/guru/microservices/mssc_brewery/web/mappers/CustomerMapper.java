@@ -1,4 +1,4 @@
-package guru.microservices.mssc_brewery.mappers;
+package guru.microservices.mssc_brewery.web.mappers;
 
 import guru.microservices.mssc_brewery.domain.Customer;
 import guru.microservices.mssc_brewery.web.model.CustomerDTO;
